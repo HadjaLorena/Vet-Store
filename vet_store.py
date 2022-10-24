@@ -1,41 +1,6 @@
-class Animal:
-  def __init__(self, animal_name, animal_type, animal_breed, animal_age):
-    self.animal_name = animal_name
-    self.animal_type = animal_type
-    self.animal_breed = animal_breed
-    self.animal_age = animal_age
+from Model import Animal
 
-  def __str__(self):
-    return f"Nome: {self.animal_name} \nEspécie: {self.animal_type} \nRaça: {self.animal_breed} \nIdade: {self.animal_age} anos"
-
-  def animal_update_informations(self):
-
-        self.animal_name = input("Informe o nome do animal: ")
-        self.animal_type = input("Informe a espécie do animal: ")
-        self.animal_breed = input("Informe a raça do animal: ")
-        self.animal_age = input("Informe a idade (em anos) do animal: ")
-
-class AnimalVet:
-  def __init__(self, id, animal):
-    self.id = id
-    self.animal = animal
-    self.health_condition = "Não avaliado ainda"
-
-  def __str__(self):
-    return f"ID animal: {self.id} \n{self.animal} \nEstado de saúde: {self.health_condition}"
-
-  def check_animal_condition(self):
-    print("-=-" * 10)
-    vet_check = input(f"{self.animal.animal_name} está saudável? (SIM ou NÃO): ").lower()
-
-    if(vet_check == "sim"):
-      self.health_condition = "O animal está saudável"
-
-    elif(vet_check == "não" or vet_check == "nao"):
-      self.health_condition = "O animal está doente"
-
-    else:
-      print("Insira uma informação válida!")
+from Model import AnimalVet
 
 register_animal = {}
 
